@@ -1,0 +1,29 @@
+<html>
+  <head>
+    <script type="text/javascript">
+      function show_date() {
+        var in_date = new Date();
+        var str =
+          in_date.getDate() +
+          "/" +
+          in_date.toLocaleString("default", {
+            month: "long",
+          }) +
+          "/" +
+          in_date.getFullYear();
+        document.getElementById("display2").innerHTML = str;
+      }
+      function show_now() {
+        var my_date = new Date();
+        document.getElementById("display").innerHTML = my_date;
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="Show Date" onclick="show_date();" />
+    <div id="display2"></div>
+    <br />
+    <input type="button" value="Show Time" onclick="show_now();" />
+    <div id="display"></div>
+  </body>
+</html>
